@@ -27,6 +27,6 @@ private:
 int main() {
   Person p("zhangsan", 20, Person::BOY);
   cout << p.get_age() << endl;
-
+  cout<<p.add_age(10).get_age()<<endl;
   return 0;
 }
