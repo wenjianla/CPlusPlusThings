@@ -27,6 +27,7 @@ public:
 int main(void) {
   // Base b;  //error! 不能创建抽象类的对象
   // Base *b = new Base(); error!
+  // 通过抽象类的指针或引用来访问其派生类的对象
   Base *bp = new Derived(); // 抽象类的指针和引用 -> 由抽象类派生出来的类的对象
   bp->show();
   return 0;
