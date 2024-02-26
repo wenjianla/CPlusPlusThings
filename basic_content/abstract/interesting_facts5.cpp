@@ -13,7 +13,8 @@ using namespace std;
 class Base {
 public:
   Base() { cout << "Constructor: Base" << endl; }
-  virtual ~Base() { cout << "Destructor : Base" << endl; }
+  virtual ~Base() { cout << "Destructor : Base" << endl; } 
+  //~Base() { cout << "Destructor : Base" << endl; } // 如果基类的析构函数不是虚函数，则只调用基类的析构函数
 };
 
 class Derived : public Base {
