@@ -41,6 +41,7 @@ public:
  */
 Fun getAddr(void *obj, unsigned int offset) {
   cout << "=======================" << endl;
+  //首先，通过将 obj 强制类型转换为 unsigned long*，然后再进行解引用，获取到对象的虚函数表指针（vptr
   void *vptr_addr =
       (void *)*(unsigned long *)obj; // 64位操作系统，占8字节，通过*(unsigned
                                      // long *)obj取出前8字节，即vptr指针
@@ -51,6 +52,8 @@ Fun getAddr(void *obj, unsigned int offset) {
    * table，因为虚表中每个元素(虚函数指针)在64位编译器下是8个字节，因此通过*(unsigned
    * long *)vptr_addr取出前8字节， 后面加上偏移量就是每个函数的地址！
    */
+
+  //接着，通过将 vptr 转换为 unsigned long*，然后加上 offset，就能得到特定虚函数在虚函数表中的地址。这个 offset 是用来指定虚函数在虚函数表中的位置
   void *func_addr = (void *)*((unsigned long *)vptr_addr + offset);
   printf("func_addr:%p\n", func_addr);
   return (Fun)func_addr;
