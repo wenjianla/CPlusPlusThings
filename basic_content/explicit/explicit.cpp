@@ -9,8 +9,13 @@ struct A {
 
 struct B {
   explicit B(int) {}
-  explicit operator bool() const { return true; }
+  explicit operator bool() const { return true; }// 转换函数
 };
+
+// 快排算法
+
+
+
 
 void doA(A a) {}
 

@@ -7,7 +7,7 @@
  */
 
 #include <iostream>
-#define isNs1 1
+//#define isNs1 1
 // #define isGlobal 2
 using namespace std;
 void func() { cout << "::func" << endl; }

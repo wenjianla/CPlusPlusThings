@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-
+// 
 class Base1 {
 public:
   Base1() : value(10) {}
@@ -11,12 +11,13 @@ public:
 protected: // 保护
   int value;
 };
-// 默认为私有继承
+// 默认为私有继承 
 class Derived1 : Base1 {
 public:
   void test2() { cout << "value is " << value << endl; }
 };
 
+//  
 class Base {
 public:
   Base() : value(20) {}

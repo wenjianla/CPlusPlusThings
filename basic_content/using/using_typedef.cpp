@@ -20,6 +20,8 @@ int main() {
   int nums2[] = {5, 7, 6};
   V2 vec2(nums2, nums2 + sizeof(nums2) / sizeof(int));
 
+  cout<< sizeof(nums1) / sizeof(int) << endl;
+  cout<< sizeof(nums2) / sizeof(int) << endl;
   for (auto i : vec1)
     cout << i << " ";
   cout << endl;
